@@ -33,3 +33,23 @@ module user_clock_gate (
     assign Q = CK & gate;
 
 endmodule
+
+// Signal synchronizing module example
+module user_rv_sync (clk, rst_n, d, q);
+
+    input  logic clk;
+    input  logic rst_n;
+
+    input  logic d;
+    output logic q;
+
+    logic r;
+
+    always @(posedge clk) begin
+        if (rst_n) begin
+            r <= d;
+            q <= r;
+        end
+    end
+
+endmodule
