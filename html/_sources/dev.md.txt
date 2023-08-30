@@ -2,6 +2,3 @@
  * 111
    * [Coverage](111_coverage_dashboard)
    * [Verification tests](111_verification_dashboard)
- * 112
-   * [Coverage](112_coverage_dashboard)
-   * [Verification tests](112_verification_dashboard)
