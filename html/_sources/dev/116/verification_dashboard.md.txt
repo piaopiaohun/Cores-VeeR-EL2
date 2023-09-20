@@ -2,9 +2,9 @@
 # Verification tests dashboard
 
 ## Test reports
- * [pic_branch](external:verification_dashboard/webpage_pic_branch/pic_branch.html)
  * [pic_gw_toggle](external:verification_dashboard/webpage_pic_gw_toggle/pic_gw_toggle.html)
- * [pic_gw_all](external:verification_dashboard/webpage_pic_gw_all/pic_gw_all.html)
- * [pic_all](external:verification_dashboard/webpage_pic_all/pic_all.html)
- * [pic_gw_branch](external:verification_dashboard/webpage_pic_gw_branch/pic_gw_branch.html)
  * [pic_toggle](external:verification_dashboard/webpage_pic_toggle/pic_toggle.html)
+ * [pic_branch](external:verification_dashboard/webpage_pic_branch/pic_branch.html)
+ * [pic_all](external:verification_dashboard/webpage_pic_all/pic_all.html)
+ * [pic_gw_all](external:verification_dashboard/webpage_pic_gw_all/pic_gw_all.html)
+ * [pic_gw_branch](external:verification_dashboard/webpage_pic_gw_branch/pic_gw_branch.html)
