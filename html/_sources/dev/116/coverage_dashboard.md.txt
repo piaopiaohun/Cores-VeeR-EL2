@@ -1,0 +1,39 @@
+(116_coverage_dashboard)=
+# Coverage dashboard
+
+## Summary reports (all tests)
+ * [all coverage](external:coverage_dashboard/all/index.html)
+ * [branch coverage](external:coverage_dashboard/branch/index.html)
+ * [toggle coverage](external:coverage_dashboard/toggle/index.html)
+ * functional coverage (no data)
+
+## Individual test reports
+### all coverage
+ * [pic](external:coverage_dashboard/all_pic/index.html)
+ * [pic_gw](external:coverage_dashboard/all_pic_gw/index.html)
+### branch coverage
+ * [cmark](external:coverage_dashboard/branch_cmark/index.html)
+ * [cmark_dccm](external:coverage_dashboard/branch_cmark_dccm/index.html)
+ * [cmark_iccm](external:coverage_dashboard/branch_cmark_iccm/index.html)
+ * [dhry](external:coverage_dashboard/branch_dhry/index.html)
+ * [hello_world](external:coverage_dashboard/branch_hello_world/index.html)
+ * [hello_world_dccm](external:coverage_dashboard/branch_hello_world_dccm/index.html)
+ * [hello_world_iccm](external:coverage_dashboard/branch_hello_world_iccm/index.html)
+ * [pic](external:coverage_dashboard/branch_pic/index.html)
+ * [pic_gw](external:coverage_dashboard/branch_pic_gw/index.html)
+ * [riscof](external:coverage_dashboard/branch_riscof/index.html)
+ * [riscv-dv_riscv_arithmetic_basic_test](external:coverage_dashboard/branch_riscv-dv_riscv_arithmetic_basic_test/index.html)
+### toggle coverage
+ * [cmark](external:coverage_dashboard/toggle_cmark/index.html)
+ * [cmark_dccm](external:coverage_dashboard/toggle_cmark_dccm/index.html)
+ * [cmark_iccm](external:coverage_dashboard/toggle_cmark_iccm/index.html)
+ * [dhry](external:coverage_dashboard/toggle_dhry/index.html)
+ * [hello_world](external:coverage_dashboard/toggle_hello_world/index.html)
+ * [hello_world_dccm](external:coverage_dashboard/toggle_hello_world_dccm/index.html)
+ * [hello_world_iccm](external:coverage_dashboard/toggle_hello_world_iccm/index.html)
+ * [pic](external:coverage_dashboard/toggle_pic/index.html)
+ * [pic_gw](external:coverage_dashboard/toggle_pic_gw/index.html)
+ * [riscof](external:coverage_dashboard/toggle_riscof/index.html)
+ * [riscv-dv_riscv_arithmetic_basic_test](external:coverage_dashboard/toggle_riscv-dv_riscv_arithmetic_basic_test/index.html)
+### functional coverage
+no data
