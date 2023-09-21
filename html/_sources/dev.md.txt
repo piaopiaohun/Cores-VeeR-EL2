@@ -2,9 +2,6 @@
  * 111
    * [Coverage](111_coverage_dashboard)
    * [Verification tests](111_verification_dashboard)
- * 118
-   * [Coverage](118_coverage_dashboard)
-   * [Verification tests](118_verification_dashboard)
  * 119
    * [Coverage](119_coverage_dashboard)
    * [Verification tests](119_verification_dashboard)
