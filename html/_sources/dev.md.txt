@@ -2,9 +2,6 @@
  * 123
    * [Coverage](123_coverage_dashboard)
    * [Verification tests](123_verification_dashboard)
- * 124
-   * [Coverage](124_coverage_dashboard)
-   * [Verification tests](124_verification_dashboard)
  * 125
    * [Coverage](125_coverage_dashboard)
    * [Verification tests](125_verification_dashboard)
