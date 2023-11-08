@@ -5,6 +5,3 @@
  * 129
    * [Coverage](129_coverage_dashboard)
    * [Verification tests](129_verification_dashboard)
- * 130
-   * [Coverage](130_coverage_dashboard)
-   * [Verification tests](130_verification_dashboard)
