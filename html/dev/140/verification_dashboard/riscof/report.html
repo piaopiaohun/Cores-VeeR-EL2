@@ -265,7 +265,7 @@ function filter_table(elem) {
 
 </script>
     <script src="script/script.js"></script> <div class="bar">   <a onclick="previousPage()" class="arrow">     <img src="./assets/arrow.svg" alt="back" />   </a>   <a class="chip-alliance-link" href="https://chipsalliance.github.io/Cores-VeeR-EL2/html/index.html">     <img src="./assets/chips-alliance-logo-mono.svg" alt="chips-alliance-logo" />   </a>   <span class="title">test_pyuvm_branch.html</span> </div>  <h1></h1>
-    <p>Report generated on 2023-12-06 09:15 GMT by <a href="https://pypi.python.org/pypi/riscof">riscof</a> v</p>
+    <p>Report generated on 2023-11-23 14:15 GMT by <a href="https://pypi.python.org/pypi/riscof">riscof</a> v</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -273,7 +273,7 @@ function filter_table(elem) {
         <td>1.25.3</td></tr>
       <tr>
         <td>Riscv-arch-test Version/Commit Id</td>
-        <td>3.8.3</td></tr>
+        <td>3.8.2.3</td></tr>
       <tr>
         <td>DUT</td>
         <td>VeeR</td></tr>
@@ -383,7 +383,6 @@ hart0:
               - tvm
               - tw
               - tsr
-              - spelp
               - sd
               -
                   -
@@ -394,7 +393,7 @@ hart0:
                       - 9
                       - 10
                   -
-                      - 24
+                      - 23
                       - 30
             uie:
                 implemented: false
@@ -525,13 +524,6 @@ hart0:
                 shadow_type: rw
                 msb: 22
                 lsb: 22
-            spelp:
-                implemented: false
-                description: Supervisor mode previous expected-landing-pad (ELP) state.
-                shadow:
-                shadow_type: rw
-                msb: 23
-                lsb: 23
             sd:
                 implemented: false
                 description: Read-only bit that summarizes whether either the FS field
@@ -555,15 +547,12 @@ hart0:
               - mbe
               - gva
               - mpv
-              - mpelp
               -
                   -
                       - 0
                       - 3
                   -
                       - 8
-                  -
-                      - 10
                       - 31
             mpv:
                 implemented: false
@@ -595,13 +584,6 @@ hart0:
                 shadow_type: rw
                 msb: 4
                 lsb: 4
-            mpelp:
-                implemented: false
-                description: Machine mode previous expected-landing-pad (ELP) state.
-                shadow:
-                shadow_type: rw
-                msb: 9
-                lsb: 9
         rv64:
             accessible: false
         description: The mstatush register keeps track of and controls the hart’s
