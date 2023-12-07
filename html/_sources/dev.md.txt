@@ -11,6 +11,3 @@
  * 140
    * [Coverage](140_coverage_dashboard)
    * [Verification tests](140_verification_dashboard)
- * 138
-   * [Coverage](138_coverage_dashboard)
-   * [Verification tests](138_verification_dashboard)
