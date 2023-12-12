@@ -5,6 +5,3 @@
  * 143
    * [Coverage](143_coverage_dashboard)
    * [Verification tests](143_verification_dashboard)
- * 141
-   * [Coverage](141_coverage_dashboard)
-   * [Verification tests](141_verification_dashboard)
