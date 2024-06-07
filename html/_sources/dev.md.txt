@@ -1,7 +1,4 @@
 # Active pull requests
- * 176
-   * [Coverage](176_coverage_dashboard)
-   * [Verification tests](176_verification_dashboard)
  * 75
    * [Coverage](75_coverage_dashboard)
    * [Verification tests](75_verification_dashboard)
