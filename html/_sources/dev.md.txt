@@ -5,9 +5,6 @@
  * 75
    * [Coverage](75_coverage_dashboard)
    * [Verification tests](75_verification_dashboard)
- * 186
-   * [Coverage](186_coverage_dashboard)
-   * [Verification tests](186_verification_dashboard)
  * 171
    * [Coverage](171_coverage_dashboard)
    * [Verification tests](171_verification_dashboard)
