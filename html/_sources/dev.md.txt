@@ -17,9 +17,6 @@
  * 195
    * [Coverage](195_coverage_dashboard)
    * [Verification tests](195_verification_dashboard)
- * 205
-   * [Coverage](205_coverage_dashboard)
-   * [Verification tests](205_verification_dashboard)
  * 75
    * [Coverage](75_coverage_dashboard)
    * [Verification tests](75_verification_dashboard)
