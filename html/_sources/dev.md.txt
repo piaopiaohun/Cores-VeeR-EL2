@@ -1,8 +1,4 @@
 # Active pull requests
- * 214
-   * [Coverage](214_coverage_dashboard)
-   * [Verification tests](214_verification_dashboard)
-   * [Documentation](external:dev/214/docs_rendered/html/index.html)
  * 75
    * [Coverage](75_coverage_dashboard)
    * [Verification tests](75_verification_dashboard)
