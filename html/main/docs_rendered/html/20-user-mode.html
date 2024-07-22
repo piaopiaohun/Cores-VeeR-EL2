@@ -628,41 +628,43 @@
 
 
 <h1 id="user-mode">20 User Mode<a class="headerlink" href="#user-mode" title="Link to this heading">¶</a></h1>
-<p>By default VeeR EL2 Core is configured in machine mode only, so to enable user mode, set the <em>-set</em> option of <a class="reference download internal" download="" href="_downloads/e2b2ce37745a96f0e502f7ecc4260018/veer.config"><span class="xref download myst">the config script</span></a>:</p>
+<p>Originally, VeeR EL2 only implemented machine mode, and user mode support was added for the Caliptra project.
+By default the VeeR EL2 Core is configured in machine mode only, so to enable user mode, use the <em>-set</em> option in <a class="reference download internal" download="" href="_downloads/e2b2ce37745a96f0e502f7ecc4260018/veer.config"><span class="xref download myst">the config script</span></a>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code><span class="n">veer</span><span class="o">.</span><span class="n">config</span> <span class="o">-</span><span class="nb">set</span><span class="o">=</span><span class="n">user_mode</span><span class="o">=</span><span class="mi">1</span>
 </code></pre></div>
 </div>
-<p>When the flag is set, macro <em>RV_USER_MODE</em> is defined.
-All user mode related code is guarded by the <em>ifdef RV_USER_MODE</em> / <em>endif</em> blocks.</p>
+<p>With this option enabled, the <em>RV_USER_MODE</em> macro is defined.
+All code related to user mode is guarded by <em>ifdef RV_USER_MODE</em> / <em>endif</em> blocks.</p>
 <h2 id="machine-isa-register-misa">Machine ISA Register (misa)<a class="headerlink" href="#machine-isa-register-misa" title="Link to this heading">¶</a></h2>
-<p>Read-only register <em>misa</em> provides information about features and instruction sets supported by the core.
-In user mode configuration, the U bit (20) is set.</p>
+<p>The read-only <em>misa</em> register provides information about features and instruction sets supported by the core.
+In the user mode configuration, the U bit (20) is set.</p>
 <h2 id="machine-status-register-mstatus">Machine Status Register (mstatus)<a class="headerlink" href="#machine-status-register-mstatus" title="Link to this heading">¶</a></h2>
-<p>Register <em>mstatus</em> is extended with fields:</p>
+<p>The <em>mstatus</em> register is extended with the following fields:</p>
 <ul class="simple">
-<li><p><em>MPP</em> - 2-bit wide field - stores the previous core operating mode after entering an exception handler. It is implemented with a single FF (permissible if supervisor mode is not present in the design). The FF stores inverted value, so that upon core reset the field indicates machine mode (<em>2’b11</em>)</p></li>
+<li><p><em>MPP</em> - 2-bit wide field - stores the previous core operating mode after entering an exception handler. It is implemented with a single FF (permissible if supervisor mode is not present in the design). The FF stores an inverted value, so that upon core reset, the field indicates machine mode (<em>2’b11</em>)</p></li>
 <li><p><em>MPEV</em> - allows temporarily changing the effective privilege mode for load and store instructions</p></li>
 </ul>
 <h2 id="machine-environment-configuration-registers-menvcfg-menvcfgh">Machine Environment Configuration Registers (menvcfg,menvcfgh)<a class="headerlink" href="#machine-environment-configuration-registers-menvcfg-menvcfgh" title="Link to this heading">¶</a></h2>
-<p>Registers <em>menvcfg</em> and <em>menvcfgh</em> control the behavior of <em>FENCE</em> instruction flavors and contain bits relevant to the Sstc, Zicboz and Zicbom extensions.
+<p>The <em>menvcfg</em> and <em>menvcfgh</em> registers control the behavior of <em>FENCE</em> instruction flavors and contain bits relevant to the Sstc, Zicboz and Zicbom extensions.
 None of these extensions are supported by the VeeR EL2 core and the core is in-order, so this register pair is read-only and all-zero.</p>
 <h2 id="user-mode-performance-counters-cycle-cycleh-instret-instreth">User Mode Performance Counters (cycle, cycleh, instret, instreth)<a class="headerlink" href="#user-mode-performance-counters-cycle-cycleh-instret-instreth" title="Link to this heading">¶</a></h2>
 <p>In order to enable performance monitoring in user mode, unprivileged shadow copies of <em>mcycle</em> and <em>minstret</em> registers are implemented: <em>cycle</em> and <em>instret</em>.
-These are read-only registers accessible from the user mode.
+These are read-only registers accessible from user mode.
 Access to the shadow copies can be restricted by the <em>mcounteren</em> CSR.
-Registers <em>cycleh</em> and <em>instreth</em> are upper 32-bits of the <em>cycle</em> and <em>instret</em> registers, respectively.</p>
+The <em>cycleh</em> and <em>instreth</em> registers are upper 32-bits of the <em>cycle</em> and <em>instret</em> registers, respectively.</p>
 <h2 id="machine-counter-enable-register-mcounteren">Machine Counter-Enable Register (mcounteren)<a class="headerlink" href="#machine-counter-enable-register-mcounteren" title="Link to this heading">¶</a></h2>
-<p>Register <em>mcounteren</em> controls access to the user mode shadow copies of the performance counters.
-Only software running in machine mode can change <em>mcounteren</em> register, so that it can grant/deny permission to specific counters for the user mode applications.</p>
+<p>The <em>mcounteren</em> register controls access to the user mode shadow copies of the performance counters.
+Only software running in machine mode can change the <em>mcounteren</em> register, so that it can grant/deny permission to specific counters for user mode applications.</p>
 <h2 id="machine-security-configuration-register-mseccfg-mseccfgh">Machine Security Configuration Register (mseccfg, mseccfgh)<a class="headerlink" href="#machine-security-configuration-register-mseccfg-mseccfgh" title="Link to this heading">¶</a></h2>
-<p>Registers <em>mseccfg</em> and <em>mseccfgh</em> control PMP’s behavior when Smepmp is enabled. The <em>RLB</em>, <em>MMWP</em> and <em>MML</em> bits are implemented, whereas others are read-only zero.</p>
+<p>The <em>mseccfg</em> and <em>mseccfgh</em> registers control PMP’s behavior when Smepmp is enabled.
+The <em>RLB</em>, <em>MMWP</em> and <em>MML</em> bits are implemented, whereas others are read-only zero.</p>
 <h2 id="privilege-mode-transitions-and-exception-handling">Privilege Mode Transitions and Exception Handling<a class="headerlink" href="#privilege-mode-transitions-and-exception-handling" title="Link to this heading">¶</a></h2>
-<p>The VeeR EL2 core implements machine and user mode, so only 2 mode transitions are possible:</p>
+<p>The VeeR EL2 core only implements machine and user mode, so only 2 mode transitions are possible:</p>
 <ul class="simple">
 <li><p>When <em>mret</em> is executed, the operating mode is changed to the value of the <em>mstatus.MPP</em> field.</p></li>
-<li><p>When an exception is entered, core enters the machine mode.</p></li>
+<li><p>When an exception is entered, the core enters machine mode.</p></li>
 </ul>
-<p>When the core enters a trap, core immediately switches mode to machine and the pipeline is flushed.</p>
+<p>When the core enters a trap, it immediately switches mode to machine and the pipeline is flushed.</p>
 <p>The introduction of user mode adds 2 new <em>mcause</em> codes for a trap caused by the <em>ECALL</em> instruction:</p>
 <ul class="simple">
 <li><p>11 (0xb) for <em>ECALL.M</em>, if ECALL is executed in machine mode</p></li>
@@ -670,12 +672,12 @@ Only software running in machine mode can change <em>mcounteren</em> register, s
 </ul>
 <h2 id="pmp-enhancements-for-memory-access-and-execution-prevention-on-machine-mode">PMP Enhancements for Memory Access and Execution Prevention on Machine Mode<a class="headerlink" href="#pmp-enhancements-for-memory-access-and-execution-prevention-on-machine-mode" title="Link to this heading">¶</a></h2>
 <p>The <a class="reference external" href="https://github.com/riscvarchive/riscv-tee/blob/main/Smepmp/Smepmp.pdf">PMP Enhancements for memory access and execution prevention on Machine mode (Smepmp)</a> document defines an extension to PMP’s behavior.</p>
-<p>The Smepmp (extended PMP) support is enabled with the <em>-set=smepmp=1</em> option:</p>
+<p>Smepmp (extended PMP) support is enabled with the <em>-set=smepmp=1</em> option:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code><span class="n">veer</span><span class="o">.</span><span class="n">config</span> <span class="o">-</span><span class="nb">set</span><span class="o">=</span><span class="n">user_mode</span><span class="o">=</span><span class="mi">1</span> <span class="o">-</span><span class="nb">set</span><span class="o">=</span><span class="n">smepmp</span><span class="o">=</span><span class="mi">1</span>
 </code></pre></div>
 </div>
-<p>When the flag is set, macro <em>RV_SMEPMP</em> is defined.
-Smepmp extension can only be used together with the user mode configuration.</p>
+<p>When the flag is set, the <em>RV_SMEPMP</em> macro is defined.
+The Smepmp extension can only be used together with the user mode configuration.</p>
 
 
   <hr>
