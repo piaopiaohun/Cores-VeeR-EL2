@@ -43,10 +43,6 @@
    * [Coverage](213_coverage_dashboard)
    * [Verification tests](213_verification_dashboard)
    * [Documentation](external:dev/213/docs_rendered/html/index.html)
- * 195
-   * [Coverage](195_coverage_dashboard)
-   * [Verification tests](195_verification_dashboard)
-   * [Documentation](external:dev/195/docs_rendered/html/index.html)
  * 204
    * [Coverage](204_coverage_dashboard)
    * [Verification tests](204_verification_dashboard)
