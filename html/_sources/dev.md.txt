@@ -11,10 +11,6 @@
    * [Coverage](197_coverage_dashboard)
    * [Verification tests](197_verification_dashboard)
    * [Documentation](external:dev/197/docs_rendered/html/index.html)
- * 204
-   * [Coverage](204_coverage_dashboard)
-   * [Verification tests](204_verification_dashboard)
-   * [Documentation](external:dev/204/docs_rendered/html/index.html)
  * 152
    * [Coverage](152_coverage_dashboard)
    * [Verification tests](152_verification_dashboard)
