@@ -3,10 +3,6 @@
    * [Coverage](208_coverage_dashboard)
    * [Verification tests](208_verification_dashboard)
    * [Documentation](external:dev/208/docs_rendered/html/index.html)
- * 218
-   * [Coverage](218_coverage_dashboard)
-   * [Verification tests](218_verification_dashboard)
-   * [Documentation](external:dev/218/docs_rendered/html/index.html)
  * 202
    * [Coverage](202_coverage_dashboard)
    * [Verification tests](202_verification_dashboard)
