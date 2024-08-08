@@ -31,10 +31,6 @@
    * [Coverage](200_coverage_dashboard)
    * [Verification tests](200_verification_dashboard)
    * [Documentation](external:dev/200/docs_rendered/html/index.html)
- * 185
-   * [Coverage](185_coverage_dashboard)
-   * [Verification tests](185_verification_dashboard)
-   * [Documentation](external:dev/185/docs_rendered/html/index.html)
  * 221
    * [Coverage](221_coverage_dashboard)
    * [Verification tests](221_verification_dashboard)
