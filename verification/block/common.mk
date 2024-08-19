@@ -14,8 +14,8 @@ CONFIG := $(abspath $(CURDIR)/../../configs)
 export PYTHONPATH := $(CURDIR)/common
 
 # Common sources
-COMMON_SOURCES  = $(CFGDIR)/common_defines.vh
-COMMON_SOURCES += $(CFGDIR)/el2_pdef.vh
+COMMON_SOURCES  = $(CFGDIR)/FOOBAR_common_defines.vh
+COMMON_SOURCES += $(CFGDIR)/FOOBAR_el2_pdef.vh
 COMMON_SOURCES += $(SRCDIR)/include/el2_def.sv
 COMMON_SOURCES += $(SRCDIR)/lib/beh_lib.sv
 
@@ -57,6 +57,6 @@ endif
 include $(shell cocotb-config --makefiles)/Makefile.sim
 
 # Rules for generating VeeR config
-$(CFGDIR)/common_defines.vh:
+$(CFGDIR)/FOOBAR_common_defines.vh:
 	cd $(CURDIR) && $(CONFIG)/veer.config -fpga_optimize=0
 
