@@ -9,7 +9,7 @@ PD_DEFINES="$DEFINES_PATH/pd_defines.vh"
 
 DEFINES_REGEX="s/((\`define)|(\`ifndef)|(\`undef)) ([A-Z0-9_]+).*/\5/p"
 DEFINES="$(sed -nr "$DEFINES_REGEX" $COMMON_DEFINES $PD_DEFINES | sort -ur)"
-DESIGN_FILES="$(find ../design ../verification -name "*.sv" -o -name "*.vh")"
+DESIGN_FILES="$(find ../design ../verification ../testbench -name "*.sv" -o -name "*.vh")"
 
 
 sed -E "s/((\`define)|(\`ifndef)|(\`undef)) ([A-Z0-9_]+)/\1 "$PREFIX"_\5/" $COMMON_DEFINES >  $DEFINES_PATH/"$PREFIX"_common_defines.vh
@@ -42,3 +42,7 @@ sed -i -E "s/module ([A-Za-z0-9_]+)/module "$PREFIX"_\1/g" $DESIGN_FILES
 for MODULE in $MODULES; do
     sed -i -E "s/[^A-Za-z0-9_]$MODULE[^A-Za-z0-9_]/"$PREFIX"_$MODULE /g" $DESIGN_FILES
 done
+
+
+MAKEFILES="$(find ../verification -name "Makefile")"
+sed -i -E "s/TOPLEVEL[[:space:]]+=[[:space:]]+([A-Za-z0-9_]+)/TOPLEVEL = "$PREFIX"_\1/g" $MAKEFILES
