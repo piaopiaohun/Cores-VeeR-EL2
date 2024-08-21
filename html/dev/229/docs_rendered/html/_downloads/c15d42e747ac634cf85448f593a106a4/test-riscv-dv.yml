@@ -210,7 +210,6 @@ jobs:
         exclude:
             - iss: renode
               test: riscv_hint_instr_test
-
             - iss: whisper
               test: riscv_full_interrupt_test
 
