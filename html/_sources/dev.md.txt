@@ -7,10 +7,6 @@
    * [Coverage](213_coverage_dashboard)
    * [Verification tests](213_verification_dashboard)
    * [Documentation](external:dev/213/docs_rendered/html/index.html)
- * 229
-   * [Coverage](229_coverage_dashboard)
-   * [Verification tests](229_verification_dashboard)
-   * [Documentation](external:dev/229/docs_rendered/html/index.html)
  * 196
    * [Coverage](196_coverage_dashboard)
    * [Verification tests](196_verification_dashboard)
