@@ -33,7 +33,7 @@ jobs:
 
       - name: Get latest nightly release
         run: |
-          wget https://dl.antmicro.com/projects/renode/builds/custom/renode-1.15.2+20240826gitb0ba6d343.linux-portable.tar.gz
+          wget https://builds.renode.io/renode-latest.linux-portable.tar.gz
 
       - name: Rename the archive
         run: |
