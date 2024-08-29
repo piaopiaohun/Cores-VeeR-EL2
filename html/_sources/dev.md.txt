@@ -23,10 +23,6 @@
    * [Coverage](223_coverage_dashboard)
    * [Verification tests](223_verification_dashboard)
    * [Documentation](external:dev/223/docs_rendered/html/index.html)
- * 227
-   * [Coverage](227_coverage_dashboard)
-   * [Verification tests](227_verification_dashboard)
-   * [Documentation](external:dev/227/docs_rendered/html/index.html)
  * 226
    * [Coverage](226_coverage_dashboard)
    * [Verification tests](226_verification_dashboard)
